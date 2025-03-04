@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class FactorialForLoop {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        // Take user input
+        System.out.print("Enter a positive integer: ");
+        int number = input.nextInt();
+
+        // Check for a valid positive integer
+        if (number < 0) {
+            System.out.println("Factorial is not defined for negative numbers.");
+        } else {
+            int factorial = 1;
+
+            // Compute factorial using for loop
+            for (int i = 1; i <= number; i++) {
+                factorial *= i;
+            }
+
+            System.out.println("The factorial of " + number + " is " + factorial);
+        }
+
+        input.close();
+    }
+}
